@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Just Travel - Book or Rent Buses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <section>
+      <div class="container">
+        <div class="logo">
+            <h1>Just Travel</h1>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="user-login" id="mobile-menu">
+            <i class="fas fa-google"></i>
+            <a href="https://auth-5x3j.onrender.com/auth/google">Login with Google</a>
+        </div>
+      </div>
+    </section>
+    <section class="google">
+        <div id="g_id_onload"
+        data-client_id="894275148771-m1kufaokdmnloitc38b4g23lat859o5h.apps.googleusercontent.com"
+        data-login_uri="http://localhost:3000/verify-token"
+        data-auto_prompt="false">
+   </div>
+   <div class="g_id_signin" 
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left">
+   </div>
+    </section>
+
+  <section>
+    <div class="bottom-nav">
+      <a href="index.html" class="nav-item">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+      </a>
+      <a href="#booking" class="nav-item">
+          <i class="fas fa-ticket-alt"></i>
+          <span>Booking</span>
+      </a>
+      <a href="menu.html" class="nav-item">
+          <i class="fas fa-bars"></i>
+          <span>Menu</span>
+      </a>
+      <a href="#wallet" class="nav-item">
+          <i class="fas fa-wallet"></i>
+          <span>Wallet</span>
+      </a>
+      <a href="#help" class="nav-item">
+          <i class="fas fa-question-circle"></i>
+          <span>Help</span>
+      </a>
+  </div>
+    
+  </section>
+  
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>Book Bus Ticket</h2>
+            <form class="booking-form">
+                <!-- Tabs and Trip Options -->
+                <div class="tabs">
+                    <button type="button" class="tab" id="bus-tab">Buses</button>
+                    <button type="button" class="tab" id="rental-tab">Rental</button>
+                </div>
+
+                <div class="trip-type-options">
+                        <label><input type="radio" name="trip-type" value="one-way" required> One Way</label>
+                        <label><input type="radio" name="trip-type" value="two-way" required> Two Way</label>
+                </div>
+    
+                <!-- Unified Input Container -->
+                <div class="unified-input-container">
+                    <!-- Leaving From Field -->
+                    <div class="input-group">
+                        <i class="fas fa-location-arrow"></i>
+                        <input type="text" id="leaving-from" placeholder="Leaving From" required>
+                    </div>
+    
+                    <!-- Connector Icon -->
+                    <div class="connector-icon" id="connector-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+    
+                    <!-- Going To Field -->
+                    <div class="input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="going-to" placeholder="Going To" required>
+                    </div>
+    
+                    <!-- Date Field -->
+                    <div class="input-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" required>
+                    </div>
+                </div>
+               <!-- Departure Time -->
+                <div class="input-group rental-options">
+                        <select id="departure-time" required>
+                        <option value="" disabled selected>Time</option>
+                        </select>
+                </div>
+                    <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    
+    <!-- Image Carousel Section -->
+    <section class="image-carousel">
+      <div class="offers-header">
+          <h2 class="offer-title">Web Offers</h2>
+          <button class="view-offers">View</button>
+      </div>
+      <div class="carousel-container">
+          <div class="carousel-track">
+              <img src="image1.png" alt="Offer 1">
+              <img src="image2.png" alt="Offer 2">
+          </div>
+      </div>
+  </section>
+  
+  <section class="horizontal-image-section">
+    <div>
+        <img src="24-hours.png" alt="Image 1" width="150" height="200">
+        <p>24x7 Support</p>
+    </div>
+    <div>
+        <img src="bus.png" alt="Image 2">
+        <p>500+ Bus Register</p>
+    </div>
+    <div>
+        <img src="map.png" alt="Image 3">
+        <p>100+ Rutes</p>
+    </div>
+      <div>
+        <img src="relationship.png" alt="Image 4">
+        <p>50+ Bus Partners</p>
+      </div>
+      <div>
+        <img src="sale.png" alt="Image 5">
+        <p>Instant Discount</p>
+      </div>
+  </section>
+  
+
+    <!-- New Content Section -->
+<section class="content-section">
+  <h2>The Best Way to Book Bus Tickets</h2>
+  <p>Booking a bus ticket has never been more convenient, thanks to the plethora of online options available today. To get started, plan your trip by determining your travel dates and destination. The best way to book a bus ticket is through online booking websites, which provide a comprehensive list of bus services, schedules, and prices. Alternatively, you can visit the official website of the bus operator if you have a specific one in mind or are seeking exclusive deals. Before finalizing your booking, compare prices and read customer reviews to choose a service that aligns with your preferences.</p>
+  <p>Look out for discounts and offers to save on your ticket, and select your preferred seat for added comfort. Upon completing your booking, receive a confirmation email or SMS, and don't forget to arrive a bit early at the bus station with your ticket and identification in hand. Finally, after your journey, consider leaving a review to help other travelers make informed decisions. Booking a bus ticket has become a seamless process that ensures a comfortable and safe journey.</p>
+
+  <h3>Online Bus Ticket Booking at Lowest Price</h3>
+  <p>Booking your bus tickets well in advance is a tried-and-true method for getting the lowest prices. Most online booking platforms offer attractive discounts for those who plan ahead. Therefore, as soon as your travel dates are confirmed, don't hesitate to make reservations. By doing so, you lock in a lower fare and ensure your seat on the bus. Flexibility is another key to finding the best deals. If your schedule allows, consider adjusting your travel dates or opting for off-peak hours. Bus fares often fluctuate based on demand, so traveling during less popular times can yield significant savings.</p>
+
+  <ul class="bus-types">
+      <li>AC Buses</li>
+      <li>Non AC Buses</li>
+      <li>Sleeper AC Buses</li>
+      <li>Super Luxury AC Buses</li>
+      <li>AC Super Luxury (Non-AC Seater)</li>
+      <li>Super Luxury (Non-AC Seater)</li>
+  </ul>
+
+  <h3>Online Bus Booking Services</h3>
+  <p>Online bus booking services have revolutionized the way people plan and book their bus journeys. These services provide a convenient and efficient way to secure bus tickets, making travel planning a breeze. Travelers can choose from a multitude of bus operators, routes, departure times, and seat preferences, allowing them to find the most suitable option that fits their schedule and budget.</p>
+
+  <h3>Why Choose Web for Bus Ticket Booking?</h3>
+  <p>Choosing Web for your bus ticket booking offers several compelling advantages. Firstly, Web collaborates with numerous bus companies, ensuring a wide range of options for destinations, departure times, and types of buses. Web's user-friendly interface makes the booking process easy and intuitive, with transparent pricing and real-time updates on seat availability.</p>
+
+  <ul class="bus-types">
+    <li>Easy and Quick Bus Booking Online</li>
+    <li>Exciting Discounts, Cashback & Bus Ticket Booking Offers</li>
+    <li>Sleeper AC Buses</li>
+    <li>Super Luxury AC Buses</li>
+    <li>Non AC Buses</li>
+</ul>
+</section>
+
+
+    <!-- About Section -->
+    <section id="home-faq" class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">How do you do online bus reservation on Web?</div>
+            <div class="faq-answer">You can reserve a bus by selecting your route, date, and preferred seat, then proceed to payment.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do I need to create an account to book bus tickets on Web?</div>
+            <div class="faq-answer">No, you can book as a guest, but creating an account makes it easier to track bookings.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Why did the Fellowship of the Ring not fly to Mordor with the Eagles?</div>
+            <div class="faq-answer">Using the Eagles was considered dangerous, as Sauron would likely detect them. They chose a stealthier approach.</div>
+        </div>
+    </section>
+
+    <section>
+      <div class="install-app-section">
+        <div class="app-image">
+            <img src="last.png" alt="App Illustration" />
+        </div>
+        <div class="app-description">
+            <h2>Install Web App & Make Travel a Lot of Fun</h2>
+            <p>Our Bus Rental App is designed to provide you with the utmost flexibility and transparency. No more hidden fees or last-minute surprises – our pricing is competitive and straightforward.</p>
+            <ul>
+                <li><strong>Get Notified:</strong> When the bus starts and is about to reach you.</li>
+                <li><strong>Trusted by Thousands:</strong> Over 1000 reviews from our customers.</li>
+                <li><strong>Lightning Fast:</strong> Book in 30 seconds even on Low Network.</li>
+                <li><strong>Enjoy Other Stuff:</strong> Games, offers, Free Rides and a lot more.</li>
+            </ul>
+            
+            <!-- Play Store image positioned at the bottom-right -->
+            <a href="https://play.google.com/store" target="_blank">
+                <img src="play.png" alt="Download on Play Store" class="playstore-image">
+            </a>
+        </div>
+    </div>
+    
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Just Travel. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a> | <a href="faq.html">FAQ</a> | <a href="#about">About </a> | <a href="#contact">Contact </a> | <a href="#travel">Travel Policy </a>
+            </div>
+            <div class="social-icons">
+              <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth/server.js"></script>
+    <script src="//code.tidio.co/fn6gnx4caudlzdxubqdintdaihaickgs.js" async></script>
+</body>
+</html>

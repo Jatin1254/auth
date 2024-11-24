@@ -25,7 +25,10 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/callback",
+      callbackURL:
+        process.env.NODE_ENV === "production"
+          ? "https://your-deployed-domain.com/auth/google/callback"
+          : "http://localhost:3000/auth/google/callback",
     },
     (accessToken, refreshToken, profile, done) => {
       return done(null, profile);
@@ -54,19 +57,23 @@ app.get("/profile", (req, res) => {
   res.json({ user: req.user });
 });
 
-app.get("/logout", (req, res) => {
-  req.logout(() => {
+app.get("/logout", (req, res, next) => {
+  req.logout(err => {
+    if (err) {
+      return next(err);
+    }
     res.redirect("/");
   });
 });
 
 // Serve Frontend Files
-app.use(express.static(path.join(__dirname, "../")));
+app.use(express.static(path.join(__dirname, "./"))); // Serve static files within the same directory
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Start Server
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
